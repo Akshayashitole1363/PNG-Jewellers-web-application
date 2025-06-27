@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultation - Custom Jewelry Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Merriweather', serif;
+    }
+
+    /* Header Section */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #d16d75;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, rgba(54, 54, 54, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      margin-bottom: 20px;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero p {
+      font-size: 1.6rem;
+      max-width: 750px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 20px 60px;
+      background-color: #d16d75;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e2606f;
+      transform: scale(1.05);
+    }
+
+    /* Consultation Content */
+    .consultation-content {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #ff6f61, #ff8a00);
+      color: white;
+      font-size: 1.4rem;
+    }
+
+    .consultation-content h2 {
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+    }
+
+    .consultation-content p {
+      margin-bottom: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .consultation-form {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .consultation-form h3 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      color: #333;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: #d16d75;
+      outline: none;
+    }
+
+    .form-group button {
+      padding: 15px 40px;
+      background-color: #d16d75;
+      color: white;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1.4rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background-color: #e2606f;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 15px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #d16d75;
+    }
+    /* Back to Services Button */
+    .back-button {
+  display: inline-block;
+  padding: 8px 20px; /* Reduced padding */
+  background-color: #d16d75;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px; /* Reduced border-radius */
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem; /* Reduced font size */
+  margin-top: 20px; /* Adjusted margin-top */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+
+    .back-button:hover {
+      background-color: #e2606f;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">Your Jewelry Brand</div>
+    <!-- <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#consultation">Consultation</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav> -->
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Consultation</h1>
+    <p>Start your custom jewelry design journey with a one-on-one consultation with our experts.</p>
+    <a href="#consultation" class="cta-button">Book Your Consultation</a>
+  </div>
+
+  <!-- Consultation Content Section -->
+  <div class="consultation-content" id="consultation">
+    <h2>Consultation Details</h2>
+    <p>During the consultation, we will listen to your ideas, understand your vision, and help you bring it to life. Our designers are here to guide you every step of the way, from concept to creation. Get ready for a personalized experience that will result in the perfect custom piece.</p>
+  </div>
+
+  <!-- Consultation Form Section -->
+  <div class="consultation-form">
+    <h3>Request a Consultation</h3>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Tell Us About Your Project</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit Request</button>
+      </div>
+    </form>
+  </div>
+<!-- Back Button -->
+<!-- Back Button (Anchor Link) -->
+<a href="custom_jewelry_page.html#services" class="back-button">Back to Consultation</a>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Your Jewelry Brand. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook" class="fab fa-facebook-f"></a>
+      <a href="#" aria-label="Instagram" class="fab fa-instagram"></a>
+      <a href="#" aria-label="Twitter" class="fab fa-twitter"></a>
+    </div>
+  </footer>
+
+</body>
+</html>

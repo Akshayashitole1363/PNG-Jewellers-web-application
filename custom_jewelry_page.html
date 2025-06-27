@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Jewelry Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background-color: #1e1e1e; /* Dark background for the black theme */
+      color: #f4f4f4; /* Light text color for contrast */
+    }
+
+    h1, h2, h3 {
+      font-family: 'Merriweather', serif;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(54, 54, 54, 0.7)), url('https://via.placeholder.com/2000x1000') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 6rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      color: #e7c672; /* Yellow color */
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero p {
+      font-size: 1.6rem;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      padding: 0 20px;
+      color: #fff;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 20px 60px;
+      background-color: #e7c672; /* Yellow color */
+      color: black;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-size: 1.5rem;
+    }
+
+    .cta-button:hover {
+      background-color: #e7c672; /* Darker yellow */
+      transform: scale(1.05);
+    }
+
+    /* Service Description Section */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #1e1e1e; /* Same black background */
+    }
+
+    .service-card {
+      background: #333; /* Dark gray background */
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #e7c672; /* Yellow border */
+      opacity: 0.2;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+    }
+
+    .service-card:hover::before {
+      opacity: 0.4;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-card h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #e7c672; /* Yellow for headings */
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card a {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #e7c672; /* Yellow button */
+      color: black;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .service-card a:hover {
+      background-color: #e7c672; /* Darker yellow */
+      transform: scale(1.05);
+    }
+
+  /* Back to Services Button */
+.back-button {
+  display: inline-block;
+  padding: 5px 15px; /* Smaller padding */
+  background-color: #e7c672; /* Yellow color */
+  color: black;
+  text-decoration: none;
+  border-radius: 20px; /* Slightly rounded corners */
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-size: 0.85rem; /* Reduced font size */
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: #e7c672; /* Darker yellow on hover */
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow effect */
+}
+
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #000;
+      color: #e7c672; /* Yellow text for footer */
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      color: #e7c672; /* Yellow social icons */
+      margin: 0 15px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #e7c672; /* Darker yellow on hover */
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .services {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Craft Your Dream Jewelry</h1>
+    <p>Our expert designers and artisans help you bring your jewelry vision to life with precision, creativity, and passion.</p>
+    <a href="#services" class="cta-button">Start Designing</a>
+  </div>
+
+  <!-- Service Description Section -->
+  <div class="services" id="services">
+    <div class="service-card">
+      <h3>Consultation</h3>
+      <p>Meet with our design experts to share your ideas and vision for your perfect piece.</p>
+      <a href="consultation-info.html" target="_blank">Learn More</a>
+    </div>
+    <div class="service-card">
+      <h3>Design</h3>
+      <p>We sketch and create detailed 3D models based on your preferences and specifications.</p>
+      <a href="design_info.html">Learn More</a>
+    </div>
+    <div class="service-card">
+      <h3>Craftsmanship</h3>
+      <p>Our artisans work meticulously to bring your design to life with precision and care.</p>
+      <a href="craft_ingo.html">Learn More</a>
+    </div>
+    <div class="service-card">
+      <h3>Delivery</h3>
+      <p>Receive your custom-designed piece, packaged beautifully and ready to wear.</p>
+      <a href="delivery_info.html">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Back to Services Button -->
+  <a href="index.html#services" class="back-button">Back to Services</a>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Your Jewelry Brand. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook" class="fab fa-facebook-f"></a>
+      <a href="#" aria-label="Instagram" class="fab fa-instagram"></a>
+      <a href="#" aria-label="Twitter" class="fab fa-twitter"></a>
+    </div>
+  </footer>
+
+</body>
+</html>

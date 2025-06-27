@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Payal Collection</title>
+
+    <!-- External CSS Libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a; /* Dark background */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f8a700, #212121); /* Yellow and Black gradient */
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+        }
+
+        .collection-description {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 900px;
+        }
+
+        .collection-description h2 {
+            font-size: 2.8rem;
+            color: #f8a700;
+            margin-bottom: 30px;
+        }
+
+        .collection-description p {
+            font-size: 1.2rem;
+            color: #d3d3d3;
+            margin-bottom: 40px;
+        }
+
+        /* Image and Card Styling */
+        .card {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            height: 100%;
+            background-color: #333; /* Dark background for the card */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-body {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #f8a700;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            color: #d3d3d3;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+            background-color: #f8a700;
+            color: #212121;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .btn-custom:hover {
+            background-color: #ffcc00;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #212121;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Back to Services Button */
+        .back-button {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #f8a700;
+            color: #212121;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #ffcc00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 767px) {
+            header {
+                padding: 60px 0;
+            }
+
+            .card-img-top {
+                height: 220px;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Silver Payal Collection</h1>
+        <p>Elegance, Tradition, and Craftsmanship in Every Step</p>
+    </header>
+
+    <!-- Collection Description Section -->
+    <div class="container collection-description">
+        <h2>Our Silver Payal Collection</h2>
+        <p>Handcrafted to perfection, our silver payals offer a blend of tradition and elegance. Crafted with the finest silver, each piece brings grace and charm to your style. Explore the collection below and find the perfect piece for you.</p>
+    </div>
+
+    <!-- Product Section with Cards (2 Cards per Row) -->
+    <div class="container">
+        <div class="row">
+            <!-- Payal Item 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/73/62/63/736263cc7643b57f22973d4a1b557d70.jpg" alt="Traditional Silver Payal" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Traditional Silver Payal</h5>
+                        <p class="card-text">Intricate and timeless design, perfect for every occasion.</p>
+                        <button class="btn-custom">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payal Item 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/GO/LG/MY-4698108/silver-payal-500x500.jpg" alt="Modern Silver Payal" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Modern Silver Payal</h5>
+                        <p class="card-text">Sleek, contemporary design for modern tastes.</p>
+                        <button class="btn-custom">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payal Item 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/originals/32/bc/2a/32bc2a5d3ef400d0450ed4150d35baa2.jpg" alt="Designer Silver Payal" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Designer Silver Payal</h5>
+                        <p class="card-text">Bold, artistic designs combined with the purity of silver.</p>
+                        <button class="btn-custom">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payal Item 4 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/4/298277981/NX/UV/SU/118595207/round-bridal-silver-payal-1000x1000.png" alt="Classic Silver Payal" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Silver Payal</h5>
+                        <p class="card-text">Simple yet elegant design for daily wear.</p>
+                        <button class="btn-custom">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payal Item 5 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://cpimg.tistatic.com/03809456/b/4/Silver-Broad-Payal.jpg" alt="Fancy Silver Payal" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Fancy Silver Payal</h5>
+                        <p class="card-text">Ornate and decorative design for special occasions.</p>
+                        <button class="btn-custom">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payal Item 6 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/originals/50/c9/f6/50c9f6f11ef5be4446cb69beedfcfcdd.jpg" alt="Gold-Plated Silver Payal" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Gold-Plated Silver Payal</h5>
+                        <p class="card-text">A beautiful blend of gold and silver for a royal look.</p>
+                        <button class="btn-custom">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Services Button -->
+    <div class="container text-center mt-5">
+        <a href="index.html#services" class="back-button">Back to Services</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Your Jewelry Brand. All rights reserved.</p>
+    </footer>
+
+    <!-- External JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
