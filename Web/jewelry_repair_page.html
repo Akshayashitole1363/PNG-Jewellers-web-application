@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Repairs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+            overflow-x: hidden;
+        }
+
+        /* Header with sleek modern colors */
+        header {
+            background: #1f1f1f;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #f39c12;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 165, 0, 0.5);
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        header p {
+            font-size: 1.5rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        /* New tagline and additional description */
+        .tagline {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            font-weight: 400;
+            margin-top: 20px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            padding: 20px 50px;
+            font-size: 1.8rem;
+            color: #fff;
+            background-color: #f39c12;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 30px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:focus {
+            outline: none;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .service-description {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+        }
+
+        .service-description h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: #f39c12;
+            margin-bottom: 30px;
+            letter-spacing: 3px;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #2c3e50;
+            color: #fff;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            width: 22%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background-color: #f39c12;
+            color: #fff;
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            transition: transform 0.4s ease, color 0.4s ease;
+        }
+
+        .service-card:hover i {
+            transform: rotate(360deg);
+            color: #fff;
+        }
+
+        .service-card h4 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .service-card p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        /* Back to Services Button */
+        .back-button {
+            display: inline-block;
+            padding: 8px 20px; /* Adjust padding for a smaller button */
+            background-color: #d16d75;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem; /* Smaller font size */
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #1f1f1f;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 50px;
+            box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #e67e22;
+        }
+
+        .social-icons i {
+            font-size: 2rem;
+            margin: 0 15px;
+            color: #bdc3c7;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons i:hover {
+            color: #f39c12;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3rem;
+            }
+
+            .services-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .service-card {
+                width: 100%;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Jewelry Repairs</h1>
+        <p>Restoring your jewelry with precision and passion</p>
+        <div class="tagline">
+            <p>Expert craftsmanship, quality materials, and meticulous care - your jewelry is in good hands.</p>
+        </div>
+        <a href="#services">
+            <button class="cta-button">Explore Our Services</button>
+        </a>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container" id="services">
+        <div class="service-description">
+            <p>At Jewelry Repairs, we specialize in transforming your jewelry back to its original glory. Whether it's resizing rings, repairing chains, or restoring precious gems, we provide expert services with a personal touch.</p>
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-gem"></i>
+                <h4>Ring Resizing</h4>
+                <p>Adjusting the size for the perfect fit.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cogs"></i>
+                <h4>Gem Repair</h4>
+                <p>Re-setting gems with precision and care.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-link"></i>
+                <h4>Chain Repairs</h4>
+                <p>Repairing your chains with durability.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-clock"></i>
+                <h4>Vintage Repair</h4>
+                <p>Restoring vintage jewelry to its former beauty.</p>
+            </div>
+        </div>
+
+        <!-- Back to Services Button -->
+        <a href="index.html#services" class="back-button">Back to Services</a>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Jewelry Repairs. All Rights Reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+        </p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
